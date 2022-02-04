@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "licuadora",
+    "precio": 500,
+    "thumbnail": "https://images.fravega.com/f1000/2f2470d502144772aba8a19d3a45a9fb.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "cocina",
+    "precio": 1500,
+    "thumbnail": "https://images.fravega.com/f1000/2f2470d502144772aba8a19d3a45a9fb.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "heladera",
+    "precio": 3500,
+    "thumbnail": "https://images.fravega.com/f1000/2f2470d502144772aba8a19d3a45a9fb.jpg"
+  },
+  {
+    "nombre": "termotanque",
+    "precio": 1200,
+    "thumbnail": "https://images.fravega.com/f1000/2f2470d502144772aba8a19d3a45a9fb.jpg",
+    "id": 4
+  }
+]
