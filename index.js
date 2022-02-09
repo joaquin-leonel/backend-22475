@@ -1,16 +1,15 @@
 const express = require("express");
-const fs = require("fs");
+const Contenedor = require("./contenedor.js");
 const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-const productos = fs.readFileSync("./productos.txt", "utf-8");
-const arrayProductos = JSON.parse(productos);
+const c = new Contenedor();
 
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (arrayProductos.length - 0)) + 0;
+
+function getRandom(length) {
+  return Math.floor(Math.random() * (length - 0)) + 0;
 }
-
 
 app.get("/", (req, res) => {
   res.send(`<h1 style="color:red;"> Bienvenidos a Express </h1>
@@ -25,15 +24,19 @@ app.get("/", (req, res) => {
 });
 
 app.get("/productos", (req, res) => {
-  res.send(arrayProductos);
-  console.log(getRandom());
+  c.getAll().then( resultado => {
+    res.send(resultado);
+  });
+  // console.log(getRandom());
 });
 
 app.get("/productosRandom", (req, res) => {
-  res.send(arrayProductos[getRandom()]);
+  c.getAll().then( resultado => {
+   
+    res.send(resultado[getRandom(resultado.length)]);
+  });
 });
 
 app.listen(PORT, () => {
   console.log(`Servidor activo en el port ${PORT}`);
 });
-
