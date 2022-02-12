@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+
+    <!-- Products Form -->
+   
+      
+
+
+      <div class="container">
+        <h3 style="text-align: center; margin-top: 20px;"> Agrega un producto </h3>
+     
+
+        <form action="/api/products" method="post">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Nombre</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="nombre" name="name" placeholder="Ingrese nombre de producto">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Precio</label>
+            </div>
+            <div class="col-75">
+              <input type="number" id="precio" name="price" placeholder="ingrese precio">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Imagen</label>
+            </div>
+            <div class="col-75">
+               <input type="text" id="imagen" name="image" placeholder="imgrese URL de imagen">
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">detalles</label>
+            </div>
+            <div class="col-75">
+              <textarea id="descripcion" name="description" placeholder="Ingrese descripcion del producto" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Crear producto">
+          </div>
+        </form>
+      </div>
+
+  
+    <div><h3 style="text-align: center; margin-top: 16px;"> subir archivos </h3></div>
+    <!-- Single File -->
+    <div class="single-file-form">
+      <form action='/api/files/single' enctype="multipart/form-data" method="POST">
+          <input type="file" id="archivo" name="single-file" class="input-file"><span onclick="clearFile('single')" class="clear-button">X</span>
+        <div><input type="submit" value=" Subir archivo" class="submit-button"></div>
+      </form>
+    </div>
+   
+    <!-- javascript -->
+    <script src="./browser-app.js"></script>
+  </body>
+</html>

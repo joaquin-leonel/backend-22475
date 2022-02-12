@@ -1,16 +1,19 @@
 {
-  "name": "backend-22475",
+  "name": "joaco",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "contenedor.js",
   "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "start": "node test.js",
+    "start-dev": "nodemon test.js",
+    "middlewares": "nodemon middlewares.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
   }
 }
